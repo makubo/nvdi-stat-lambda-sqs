@@ -1,18 +1,18 @@
 # NDVI Analytics
 
-Simple NDVI Analytics application which uses Sentinel Hub Statistical API to recieve satellite data.
+Simple NDVI Analytics application which uses Sentinel Hub Statistical API to receive satellite data.
 Application made in purpose of demonstrating usage Terraform for deploying AWS Lambda and SQS.
 
 ## Description
 
-Service consist of AWS Lambda Function: 
+Service consist of AWS Lambda Function:
 - `ndvi_stat`
 
 and two SQS Queues:
 - `ndvi_stat_input.fifo` (queue for input data)
 - `ndvi_stat_result` (result message queue)
 
-Any message in `ndvi_stat_input.fifo` inits `ndvi_stat` processing. In the end of process `ndvi_stat` puts results to `ndvi_stat_result`.
+Any message in `ndvi_stat_input.fifo` initiates `ndvi_stat` processing. At the end of the process `ndvi_stat` puts results to `ndvi_stat_result`.
 
 Correct input message data - top-left and bottom-right coordinates of region rectangle. Message group ID value could be any as you want.
 
@@ -21,7 +21,7 @@ Correct message body example:
 139.0;35.5;140.0;34.5
 ```
 
-Result message cosist:
+Result message consist:
 - `date` Date of satellite data
 - `min` NDVI Minimum value
 - `max` NDVI Maximum value
@@ -121,5 +121,3 @@ terraform apply -auto-approve
 - Sentinel Hub Statistical API https://sentinelhub-py.readthedocs.io/en/latest/examples/statistical_request.html#Make-a-Statistical-API-request
 - Python Lambda functions https://docs.aws.amazon.com/lambda/latest/dg/python-package.html
 - Using Lambda with Amazon SQS https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html
-
-
