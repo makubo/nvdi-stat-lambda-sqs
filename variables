@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# AWS settings
+export TF_VAR_AWS_ACCESS_KEY=""
+export TF_VAR_AWS_SECRET_KEY=""
+
+# Sentinel Hub settings
+export TF_VAR_SH_INSTANCE_ID=""
+export TF_VAR_SH_CLIENT_ID=""
+export TF_VAR_SH_CLIENT_SECRET=""
