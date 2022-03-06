@@ -2,6 +2,8 @@ __pycache__/
 pyenv/
 lambda/
 terraform/
+lambda.zip
 terraform.tfstate
 terraform.tfstate.backup
-lamda.zip
+.terraform.lock.hcl
+.terraform/
