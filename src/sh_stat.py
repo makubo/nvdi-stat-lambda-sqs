@@ -57,6 +57,8 @@ def collect_stats(region):
   
   stat_data = stat_request.get_data()[0]["data"]
   
+  print(f"Statistics data: {stat_data}")
+
   latest_date = None
   latest_index = 0
   
