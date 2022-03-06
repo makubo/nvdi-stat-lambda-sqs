@@ -1,0 +1,7 @@
+__pycache__/
+pyenv/
+lambda/
+terraform/
+terraform.tfstate
+terraform.tfstate.backup
+lamda.zip
